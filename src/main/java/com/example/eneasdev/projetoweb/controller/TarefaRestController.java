@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/tarefas")
+@RequestMapping(value = "/api/tarefas")
 public class TarefaRestController {
 
     @Autowired
