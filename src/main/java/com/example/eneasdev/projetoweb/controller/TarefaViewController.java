@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/tarefas")
-public class TarefaController {
+public class TarefaViewController {
 
     @Autowired
     private TarefaService tarefaService;

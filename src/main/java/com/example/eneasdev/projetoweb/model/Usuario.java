@@ -1,5 +1,6 @@
 package com.example.eneasdev.projetoweb.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,7 +15,9 @@ public class Usuario {
     private String nome;
     private String email;
 
+
     // Relacionamento OneToMany com Tarefa
+    @JsonIgnore
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Tarefa> tarefas;
 
